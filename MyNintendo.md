@@ -5,7 +5,7 @@ HOST: https://news-api.entry.nintendo.co.jp
 
 ## Played Game List [/api/v1.1/users/me/play_histories]
 ### Get Played Game List [GET]
-The `service_token_code` might be response from [here](./NintendoAccountBlueprint.md#service-token-connect100apitoken).
+The `service_id_token` might be response from [here](./NintendoAccountBlueprint.md#service-token-connect100apitoken).
 + Request
   + Headers: 
   ```
@@ -13,7 +13,7 @@ The `service_token_code` might be response from [here](./NintendoAccountBlueprin
   accept-encoding: br;q=1.0, gzip;q=0.9, deflate;q=0.8
   user-agent: com.nintendo.znej/2.1.0 (iOS/16.6)
   accept-language: en-US;q=1.0, ja-JP;q=0.9
-  authorization: Bearer ${service_token_code}
+  authorization: Bearer ${service_id_token}
   ```
   + Body: none
  
@@ -25,7 +25,7 @@ The `service_token_code` might be response from [here](./NintendoAccountBlueprin
     "lastUpdatedAt": "2023-08-27T21:28:38+09:00",
     "playHistories": [
         {
-            "deviceType": "HAC",
+            "deviceType": "HAC", // Nintendo Switch
             "firstPlayedAt": "2023-01-12T04:48:12+09:00",
             "imageUrl": "https://atum-img-lp1.cdn.nintendo.net/i/c/1427016279c04de0b080b8dd26e209e0_256",
             "lastPlayedAt": "2023-08-09T16:11:06+09:00",
@@ -36,7 +36,7 @@ The `service_token_code` might be response from [here](./NintendoAccountBlueprin
             "totalPlayedMinutes": 23827
         },
         {
-            "deviceType": "HAC",
+            "deviceType": "HAC", // Nintendo Switch
             "firstPlayedAt": "2023-01-09T22:19:48+09:00",
             "imageUrl": "https://atum-img-lp1.cdn.nintendo.net/i/c/1adfe782967548c99659c27c9a3bca56_256",
             "lastPlayedAt": "2023-08-05T23:08:02+09:00",
@@ -47,7 +47,7 @@ The `service_token_code` might be response from [here](./NintendoAccountBlueprin
             "totalPlayedMinutes": 4966
         },
         {
-            "deviceType": "CTR",
+            "deviceType": "CTR", // Nintendo 3DS
             "firstPlayedAt": "2014-11-21T00:00:00+09:00",
             "imageUrl": "https://idbe-img-lp1.cdn.nintendo.net/3ds/c786ab5bc6abb9bbed66b20a5f1d5ca6.png",
             "lastPlayedAt": "2016-10-31T00:00:00+09:00",
