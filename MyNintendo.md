@@ -1,7 +1,7 @@
 FORMAT: 1A
 HOST: https://news-api.entry.nintendo.co.jp
 
-# MyNintendo API Blueprint
+# My Nintendo App API Blueprint
 
 ## Played Game List [/api/v1.1/users/me/play_histories]
 ### Get Played Game List [GET]
